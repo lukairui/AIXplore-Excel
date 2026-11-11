@@ -1,0 +1,54 @@
+{
+  "name": "aixplore-excel",
+  "version": "0.1.0",
+  "description": "AIXplore-Excel — AI 数据分析工作台：上传 Excel，自然语言生成计算列、分析视图与对话式分析报告，全部数据本地处理",
+  "main": "./out/main/index.js",
+  "author": "lukairui",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lukairui/AIXplore-Excel.git"
+  },
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "test": "vitest run",
+    "typecheck:node": "tsc --noEmit -p tsconfig.node.json --composite false",
+    "typecheck:web": "vue-tsc --noEmit -p tsconfig.web.json --composite false",
+    "start": "electron-vite preview",
+    "postinstall": "electron-builder install-app-deps",
+    "build:unpack": "npm run build && electron-builder --dir",
+    "build:win": "npm run build && electron-builder --win",
+    "build:mac": "npm run build && electron-builder --mac",
+    "build:linux": "npm run build && electron-builder --linux"
+  },
+  "dependencies": {
+    "@babel/standalone": "^7.29.7",
+    "@langchain/core": "^1.2.3",
+    "@langchain/langgraph": "^1.4.8",
+    "d3": "^7.9.0",
+    "date-fns": "^4.4.0",
+    "echarts": "5.6.0",
+    "element-plus": "2.13.1",
+    "exceljs": "^4.4.0",
+    "jszip": "^3.10.1",
+    "lucide-vue-next": "^0.577.0",
+    "motion-v": "^2.3.0",
+    "vue": "3.5.26"
+  },
+  "devDependencies": {
+    "@element-plus/icons-vue": "^2.3.2",
+    "@types/node": "^22.0.0",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "electron": "^45.0.0",
+    "electron-builder": "^25.1.8",
+    "electron-vite": "^6.0.0",
+    "fake-indexeddb": "^6.2.5",
+    "jsdom": "^27.4.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.0.0",
+    "vitest": "^4.1.10",
+    "vue-tsc": "^3.3.14"
+  }
+}

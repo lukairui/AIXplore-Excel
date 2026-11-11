@@ -1,0 +1,29 @@
+appId: com.lukairui.aixplore.excel
+productName: AIXplore Excel
+directories:
+  buildResources: resources
+  output: release
+files:
+  - out/**
+  - "!**/.vscode/*"
+  - "!src/*"
+  - "!electron.vite.config.{js,ts,mjs,cjs}"
+  - "!{.eslintignore,.eslintrc.cjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}"
+  - "!{.env,.env.*,.npmrc,pnpm-lock.yaml}"
+asarUnpack:
+  - resources/**
+mac:
+  category: public.app-category.productivity
+  target:
+    - target: dmg
+      arch:
+        - arm64
+        - x64
+win:
+  target:
+    - nsis
+linux:
+  target:
+    - AppImage
+  category: Office
+npmRebuild: false
